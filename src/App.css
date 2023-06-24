@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+body, html{
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHVycGxlJTIwZ3JhZGllbnR8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.head{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* text-align: center; */
 }
 
-.App-link {
-  color: #61dafb;
+.head .trello-icon{
+  width: 50px;
+  height: auto;
+  align-items: center;
+  margin-bottom: 7px;
+  color:#b4b1b1;
+  margin-right: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.heading{
+  text-align: center;
+  font-size: 55px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  background: -webkit-linear-gradient(#fff9f9, #707070);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+
+
+
+.board {
+  display: flex;
+}
+
+.lane {
+  flex: 1;
+  margin: 0 10px;
+  padding: 10px;
+  background-color: #ebecf0;
+  color: #182c4c;
+  border-radius: 5px;
+  
+}
+
+.lane-content h3{
+  margin: 10px;
+  font-size: 20px;
+}
+
+.lane-content{
+  display: flex;
+  justify-content: space-between;
+}
+
+.lane-content .dots{
+  margin-right: 20px;
+  align-items: center;
+  height: auto;
+
+}
+
+.card-list {
+  min-height: 100px;
+  margin-top: 10px;
+  background-color: #ebecf0;
+  border-radius: 5px;
+  padding: 10px;
+  
+}
+
+
+.task-content{
+  display: flex;
+  justify-content: space-between;
+}
+.task-content-task{
+  font-weight: 600;
+}
+
+.task-content-icons{
+  display: flex;
+  gap: 10px;
+}
+
+.card {
+  /* display: flex; */
+  align-items: center;
+  padding: 20px;
+  padding-left: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  cursor: grab;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 2px 0px;
+
+}
+
+.edit-icon{
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-left: auto;
+  cursor: pointer;
+  color: #ff0000;
+}
+
+.delete-icon:hover {
+  color: #cc0000;
+}
+
+
+.add-task-container{
+  margin-left: 10px;
+  
+}
+.add-task-container  input{
+  width: auto;
+  margin-right: 10px;
+  padding: 8px;
+  border: none;
+  
+}
+
+.add-task-container  input::placeholder{
+  color: #a09b9b;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.add-task-container button{
+  border: none;
+  color: #6e737f;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.add-task-container button:hover{
+  background-color: #ffffff;
+  border: 1px solid #b1aeae;
+  transition: 0.2s all ease-in-out;
+}
+
+
+.add-task-container button span{
+  margin-right: 3px;
+  font-size: 20px;
 }
